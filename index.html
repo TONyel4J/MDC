@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+     <title>MDC Fitness</title>
+     <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<section class="header">
+    <nav>
+        <h1>MDC Fitness</h1>
+        <div class="nav-links" id="navLinks">
+            <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>                  
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#plans">PLANS</a></li>
+                    <li><a href="#videos">VIDEOS</a></li>
+                    <li><a href="#rate">RATE US</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+<div class="text-box">
+    <h1>Get Fit and Healthy</h1>
+    <p>Passionate about empowering others on their fitness journey!<br> Let's collaborate on creating personalized workout plans tailored to your goals. Together, we'll turn aspirations into achievements!</p>
+    <a href="#plans" class="hero-btn">Start Now</a>
+</div>
+
+</section>
+
+<!--ABOUT-->
+
+<section id="about" class="course">
+    <h1>ABOUT US</h1>
+    <P>M-otivation D-iscipline C-onsistency</P>
+
+    <div class="row">
+        <div class="course-col1">
+            <h3>Motivation</h3>
+            <p>Motivation serves as the catalyst for action, igniting the spark that propels us to initiate and pursue our goals.</p>
+        </div>
+        <div class="course-col2">
+            <h3>Discipline</h3>
+            <p>With discipline, we push through fatigue, embrace discomfort, and stay committed to our fitness goals. It's the silent force that transforms exercise from a choice to a commitment, making progress inevitable</p>
+        </div>
+        <div class="course-col3">
+            <h3>Consistency</h3>
+            <p>Consistency is the reassuring voice that whispers, "keep going." It transforms dreams into realities, proving that success is not an overnight feat but a gradual, persistent journey.</p>
+        </div>
+    </div>
+
+</section>
+
+<section id="plans" class="campus">
+    <h1>WORKOUT PLANS</h1>
+    <P>These two workout plans are common and is good to use if you are just going to begin your .</P>
+
+    <div class="row">
+        <div class="campus-col">
+            <img src="img/11.jpg">
+            <div class="layer">
+                <h3>PUSH / PULL / LEGS SPLIT</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="img/15.jpg">
+            <div class="layer">
+                
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="img/14.jpg">
+            <div class="layer">
+                <h3>ARNOLD'S SPLIT</h3>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<!--VIDEOS-->
+
+<h3 id="videos" class="heading">
+    GUIDE VIDEOS
+    <p>These are videos of some highlight of PPL / Arnold's split workout</p>
+</h3>
+
+
+<div class="container">
+
+    <div class="main-video">
+        <div class="video">
+            <video src="videos/8.mp4" controls muted autoplay></video>
+        </div>
+    </div>
+
+    <div class="video-list">
+        <div class="vid active">
+            <video src="videos/8.mp4" controls muted></video>
+
+        </div>
+        <div class="vid">
+            <video src="videos/9.mp4" controls muted></video>
+            
+        </div>
+        <div class="vid">
+            <video src="videos/10.mp4" controls muted></video>
+            
+        </div>
+        <div class="vid">
+            <video src="videos/11.mp4" controls muted></video>
+            
+        </div>
+        <div class="vid">
+            <video src="videos/12.mp4" controls muted></video>
+            
+        </div>
+        <div class="vid">
+            <video src="videos/13.mp4" controls muted></video>
+            
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+let listVideo = document.querySelectorAll('.video-list .vid');
+let mainVideo = document.querySelector('.main-video video');
+let title = document.querySelectorAll('.main-video .title');
+
+listVideo.forEach(video =>{
+    video.onclick = () =>{
+        listVideo.forEach(vid => vid.classList.remove('active'));
+        video.classList.add('active');
+        if(video.classList.add('active')){
+            let src = video.children[0].getAttribute('src');
+            mainVideo.src = src;
+        }
+    };
+});
+
+</script>
+
+<!--RATE-->
+
+<section id="rate" class="cta">
+    <h1>Your feedback matters! Thank you for being a valued part of our community!.</h1>
+    <a href="" class="hero-btn1">Rate Us</a>
+
+</section>
+
+<!--footer-->
+
+<section class="footer">
+    <h4>About Us</h4>
+    <p>Looking for a personalized touch to your plans? We're here for you! Contact us now to explore tailored solutions that fit your unique goals. <br>Let's embark on your journey together!</p>
+
+    <div class="icons">
+        <p>You can follow us on our Social Medias:</p>
+        <i class="fa-brands fa-facebook">
+            <p>[MDC Fitness Hub]</p>
+        </i>
+        <i class="fa-brands fa-twitter">
+            <p>[FitnessMDC.csa]</p>
+        </i>
+        <i class="fa-brands fa-instagram">
+            <p>[mdcfitness.hub]</p>
+        </i>
+        <i class="fa-brands fa-tiktok">
+            <p>[MDC Fitness]</p>
+        </i>
+    </div>
+    
+
+</section>
+
+<!--JAVASCRIPT-->
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>
